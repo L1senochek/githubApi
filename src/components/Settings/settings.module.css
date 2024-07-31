@@ -1,0 +1,65 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.settings__btn {
+  display: flex;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+.settings__btn.open {
+  transform: rotate(-180deg);
+}
+
+.settings__btn.open > svg > path {
+  fill: #00ffff;
+}
+
+.settings__menu {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+  height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  width: 160px;
+  z-index: 1;
+  border-color: #00ffff;
+  border-width: 2px;
+  transition:
+    background-image 0.5s,
+    height 0.5s,
+    border-style 0.5s;
+}
+
+.settings.dark > .settings__menu {
+  background-color: #1a1a1a;
+}
+
+.settings.light > .settings__menu {
+  background-color: #c2c2c2;
+}
+
+.settings__menu.open {
+  height: 50px;
+  border-style: solid;
+  padding: 10px;
+}
+
+@media (hover: hover) {
+  .settings__btn:hover {
+    transform: rotate(-180deg);
+  }
+  .settings__btn:hover > svg > path {
+    fill: #00ffff;
+  }
+}

@@ -1,0 +1,8 @@
+.icon-loupe {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-loupe > path {
+  stroke: #ffffff;
+}
