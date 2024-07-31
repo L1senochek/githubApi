@@ -1,0 +1,105 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper.dark {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+.wrapper.light {
+  color: #000;
+  background-color: #c2c2c2;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.middle-section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70vh;
+  padding: 1rem 0;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #fff;
+  transition: color 0.5s;
+}
+
+.logo__wrapper.light {
+  color: #000;
+}
+
+.logo__wrapper.light > svg > path {
+  fill: #000;
+}
+
+.logo__wrapper:focus-visible {
+  outline: non;
+}
+
+.logo__title {
+  margin: 0;
+}
+
+.settings__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.flyout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  border-radius: 8px;
+  border: 1px solid #00ffff;
+  box-shadow: 0 0 15px 1px #00ffff;
+  padding: 2rem;
+  background-color: #242424;
+  gap: 15px;
+  bottom: 2rem;
+  z-index: 10;
+}
+
+.flyout.light {
+  background-color: #c2c2c2;
+}
+
+.flyout__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (hover: hover) {
+  .logo__wrapper:hover {
+    color: #00ffff;
+  }
+}

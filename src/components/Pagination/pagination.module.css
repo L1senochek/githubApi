@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination > button.active {
+  border-color: #00ffff;
+  box-shadow: 0 0 15px 1px #00ffff;
+}
+
+.pagination > button:disabled {
+  border-color: transparent;
+  box-shadow: none;
+  cursor: no-drop;
+}
+
+.pagination > span {
+  display: flex;
+  width: 40px;
+  align-items: flex-end;
+  justify-content: center;
+  height: 40px;
+  cursor: auto;
+  user-select: none;
+}

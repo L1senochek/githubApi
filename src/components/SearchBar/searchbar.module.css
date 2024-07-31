@@ -1,0 +1,81 @@
+.searchbar {
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.87);
+  padding: 0.6em 1.2em;
+  transition:
+    border-color 0.5s,
+    box-shadow 0.5s;
+}
+
+.searchbar.dark {
+  background-color: #1a1a1a;
+}
+
+.searchbar.light {
+  background-color: transparent;
+  color: #000;
+}
+
+.searchbar.hovered,
+.searchbar.focused {
+  border-color: #00ffff;
+  box-shadow: 0 0 15px 1px #00ffff;
+}
+
+.searchbar__input {
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: transparent;
+  border-color: transparent;
+  width: 0;
+  border-width: 0px;
+  padding: 0px;
+  transition: width 0.5s;
+}
+
+.searchbar.hovered > .searchbar__input,
+.searchbar.focused > .searchbar__input {
+  width: 200px;
+  border-width: 2px;
+  padding: 1px 0px;
+}
+
+.searchbar__input:focus-visible {
+  border-color: transparent;
+  outline: none;
+}
+
+.searchbar.light > .searchbar__input {
+  color: #000;
+}
+
+.searchbar__btn {
+  padding: 0;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.searchbar.light > .searchbar__btn {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.searchbar.hovered > .searchbar__btn > svg > path,
+.searchbar.focused > .searchbar__btn > svg > path {
+  stroke: #00ffff;
+}
+
+.searchbar__btn:focus,
+.searchbar__btn:focus-visible {
+  outline: none;
+}
+
+@media (hover: hover) {
+  .searchbar__btn:hover {
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
